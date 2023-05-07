@@ -24,7 +24,6 @@ body, input {
 main {
     width: 80vw;
     height: 80vh;
-    margin: 10vh 8vw 10vh 12vw;
     display: flex;
     gap: 1vw;
 }
@@ -37,7 +36,7 @@ main {
     position: relative;
 }
 
-.robo {
+.robotron-exibido {
     height: 110%;
     z-index: 1;
     position: absolute;
@@ -90,7 +89,7 @@ main {
 }
 
 .controle {
-    background: var(--main-preto);
+    background: var(--main-branco);
     border-radius: 25px;
     float: right;
     display: inline-flex;
@@ -105,7 +104,7 @@ main {
     background: none;
     border: 0;
     margin: 0 1rem;
-    color: var(--main-branco);
+    color: var(--main-preto);
     text-align: center;
     font-size: 2.5em;
     display: inline-flex;
@@ -121,10 +120,15 @@ main {
     border-radius: 50%;
     color: var(--main-cinza);
     font-size: 4em;
-    background: var(--main-preto);
+    background: var(--main-branco);
     text-align: center;
     border: 3px solid var(--main-cinza);
     cursor: pointer;
+}
+
+.controle-ajuste:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--main-preto);
 }
 
 .linha {
@@ -139,14 +143,15 @@ main {
     float: right;
     border: 3px solid var(--main-branco);
     background: var(--main-branco);
-    clip-path: polygon(100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 0);
     cursor: pointer;
 }
 
 .producao:hover {
-    background: var(--main-preto);
-    color: var(--main-branco)
+    background: var(--main-cinza);
+    color: var(--main-preto);
+    box-shadow: 0 0 10px var(--main-preto);
 }
+
 
 
 
@@ -207,6 +212,44 @@ main {
     order: 1;
     flex-basis: 35%;
     margin: 10px 0 0;
+}
+
+/****************************** Estilos *****/
+
+.estilos {
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    border: 3px solid var(--main-branco);
+    background: var(--main-branco);
+}
+
+.lista_robotrons {
+    display:flex;
+    flex-direction:row;
+    gap: 1.5rem;
+}
+.escolha_seu_robotron {
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: 0.2em 1em;
+    float: right;
+}
+
+.robotron_cores {
+    width: 5rem;
+    height: auto;
+    border: 1px solid #414141;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.robotron_cores:hover {
+    box-shadow: 0 0 10px var(--main-preto);
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 1600px) {
